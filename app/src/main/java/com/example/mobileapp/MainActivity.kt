@@ -8,9 +8,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         val battery = Battery()
         val serviceProvider = ServiceProvider()
-        val simCard = SimCard(serviceProvider)
+        val simCard = SimCard()
+        simCard.setServiceProvider(serviceProvider)
         val display = Display()
 
         val mobile = Mobile(battery, simCard, display)
