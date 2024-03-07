@@ -1,8 +1,9 @@
 package com.example.mobileapp
 
 import android.util.Log
+import javax.inject.Inject
 
-class ServiceProvider {
+class ServiceProvider @Inject constructor(){
     init{
         Log.i("TAGY", "Service Provider Created")
     }
