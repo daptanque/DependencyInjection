@@ -13,6 +13,11 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        DaggerMobileComponent.create().getMobileInstance().turnOnMobile()
+
+
+
+
 
         /**val battery = Battery()
         val simCard = SimCard()
