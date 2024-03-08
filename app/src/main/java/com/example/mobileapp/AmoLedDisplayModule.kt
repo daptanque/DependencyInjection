@@ -4,7 +4,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class AmoLedDisplayModule {
+class AmoLedDisplayModule(var displayResolution: Int) {
 
     @Provides
     fun providesAmoledDisplay(amoleDdisplay: AMOLEDdisplay) : Display{

@@ -14,12 +14,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-
-        DaggerMobileComponent.create()
+        //Custom Creation
+        DaggerMobileComponent.builder()
+            .amoLedDisplayModule(AmoLedDisplayModule(1920))
+            .build()
             .inject(this)
 
 
-        mobile.turnOnMobile()
+
+        //For simple creation
+        /**DaggerMobileComponent.create()
+            .inject(this)
+
+
+        mobile.turnOnMobile()**/
 
 
 
