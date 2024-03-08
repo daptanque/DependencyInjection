@@ -2,10 +2,12 @@ package com.example.mobileapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mobile: Mobile
+    @Inject
+    lateinit var mobile: Mobile
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,7 +15,11 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        DaggerMobileComponent.create().getMobileInstance().turnOnMobile()
+        DaggerMobileComponent.create()
+            .inject(this)
+
+
+        mobile.turnOnMobile()
 
 
 
