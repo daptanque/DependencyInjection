@@ -13,13 +13,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        (application as MobileApplication).mobile
+            .inject(this)
+
+
 
         //Custom Creation
-        DaggerMobileComponent.builder()
+        /**DaggerMobileComponent.builder()
             .amoLedDisplayModule(AmoLedDisplayModule(1920))
             .build()
             .inject(this)
-
+**/
 
 
         //For simple creation
