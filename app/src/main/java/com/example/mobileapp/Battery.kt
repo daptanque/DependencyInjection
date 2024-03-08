@@ -3,7 +3,8 @@ package com.example.mobileapp
 import android.util.Log
 import javax.inject.Inject
 
-class Battery @Inject constructor(){
+//consider as a ready class - 3rd party lib
+class Battery{
 
     init{
         Log.i("TAGY", "Battery Created")
